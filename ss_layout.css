@@ -15,29 +15,98 @@
 
 
 /* Article Styles */
-
+/* This floats the article to the left and gives it a width of 384 pixels. */
+article {
+    float: left;
+    width: 384px;
+}
 
 
 
 /* First Line and Drop Cap Styles */
+/* This affects the first line of the first paragraph and gives it a font size of 1.25 em and sets the font to small caps. */
+article p:first-of-type::first-line {
+    font-size: 1.25em;
+    font-variant: small-caps;
+}
+
+/* This affects the first letter of the first paragraph and gives it a font size of 4 em, a line height of 0.8em, a left and right margin of 5 px, a font of serif and it floats it to the left. */
+article p:first-of-type::first-letter {
+    font-size: 4em;
+    font-family: serif;
+    float: left;
+    line-height: 0.8em;
+    margin-right: 5px;
+    margin-left: 5px;
+}
 
 
-
-
-
+/* This sets the aside to have a width of 768 pixels and floats it to the left. */
 /* Aside Styles */
-
+aside {
+    width: 768px;
+    float: left;
+}
 
 
 
 /* Map Styles */
+/* This sets the battle map thats on the rendered page to have a width of 688 px, sets the top and bottom margin to 20 pixels and the left and right margin to auto. Last sets the position to relative. */
+div#battleMap {
+    width: 688px;
+    margin: 20px auto;
+    position: relative;
+}
 
-
-
+img#mapImage {
+    display: block;
+    width: 100%;
+}
 
 /* Interactive Map Styles */
+/* This selects the links to have an absolute position meaning they start at the top left of the page.  */
+a.battleMarkers {
+    position: absolute;
+}
 
+/* This sets the coordinate of the hypertext link on the battle map on the rendered page. */
+#marker1 {
+    top: 220px;
+    left: 340px;
+}
 
+#marker2 {
+    top: 194px;
+    left: 358px;
+}
 
+#marker3 {
+    top: 202px;
+    left: 400px;
+}
 
-/* Map Information Styles */
+#marker4 {
+    top: 217px;
+    left: 452px;
+}
+
+#marker5 {
+    top: 229px;
+    left: 498px;
+}
+
+#marker6 {
+    top: 246px;
+    left: 544px;
+}
+
+/* Map Information Styles  */
+/* This makes the description of the coordinates disappear on the rendered page. */
+div.mapInfo {
+    display: none;
+}
+
+/* This makes the descriptions appear when you hover over the coordinate.  */
+a.battleMarkers:hover+div.mapInfo {
+    display: block;
+}
